@@ -3,10 +3,14 @@
   position: relative;
   min-height: 100vh;
   background-color: #000033;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &::before {
     content: "";
     background: url("./images/amp_background.png");
+    background-attachment: fixed;
     background-size: cover;
     min-height: 100vh;
     filter:blur(5px);
@@ -54,4 +58,14 @@
 main#content {
   position: relative;
   z-index: 2;
+  width: 95%;
+  max-width: 500px;
+
+  .product {
+    background-color: #000033;
+    margin: 50px;
+    // padding: 25px;
+    color:#bbddff;
+    padding: 10px;
+  }
 }

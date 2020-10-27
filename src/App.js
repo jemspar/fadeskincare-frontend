@@ -1,25 +1,23 @@
 import './App.scss';
+import {products} from './data/products.js';
 
 function App() {
   return (
     <div className="App">
-    
+
       <header className="App-header">
         <img src="https://fadeskincare.co/images/fade_logo_web.svg" className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
 
-      <main id="content" />
+      <main id="content">
+        {products.map(prod => (
+          <div className="product">
+            <h1>{prod.name}</h1>
+            <p className="price">${prod.price}</p>
+            <p className="description">{prod.description}</p>
+          </div>
+        ))}
+      </main>
     </div>
   );
 }
