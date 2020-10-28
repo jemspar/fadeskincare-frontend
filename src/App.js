@@ -1,5 +1,6 @@
 import './App.scss';
-import {products} from './data/products.js';
+import Product from './Product'
+import {products} from './data/products.js'
 
 function App() {
   return (
@@ -10,12 +11,8 @@ function App() {
       </header>
 
       <main id="content">
-        {products.map(prod => (
-          <div className="product">
-            <h1>{prod.name}</h1>
-            <p className="price">${prod.price}</p>
-            <p className="description">{prod.description}</p>
-          </div>
+        {products.map((prod,key) => (
+          <Product key={key} prod={prod} />
         ))}
       </main>
     </div>
