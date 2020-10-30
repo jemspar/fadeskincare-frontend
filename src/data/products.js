@@ -10,6 +10,6 @@ export const products = [
     name: "QUENCH Serum",
     price: 7,
     description: "1.5% hyaluronic acid. simple, effective hydration.",
-    secondaryImage: "wakeup_oil_bg.png",
+    secondaryImage: "quench_serum_bg.png",
   }
 ]

@@ -51,7 +51,9 @@
   }
 }
 
-
+body {
+  font-size: 24px;
+}
 
 // content
 
@@ -63,11 +65,23 @@ main#content {
 
   .product {
     background-color: #000033;
+    background-image: var(--background-src);
+    background-size: cover;
     margin: 50px;
+    width: 95%;
+    max-width: 721px;
     // padding: 25px;
     color:#bbddff;
     padding: 10px 10px 10px 10px;
     background-size: cover;
-    min-height: 500px;
+    height: 75vh;
+    max-height: 1081px;
+
+    p {
+      font-family: 'Consolas', monospace;
+      font-size: 1rem;
+      color:white;
+      text-align: left;
+    }
   }
 }
