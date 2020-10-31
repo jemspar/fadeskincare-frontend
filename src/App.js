@@ -5,16 +5,21 @@ import {products} from './data/products.js'
 function App() {
   return (
     <div className="App">
+      <div id="background" />
 
-      <header className="App-header">
-        <img src="https://fadeskincare.co/images/fade_logo_web.svg" className="App-logo" alt="logo" />
-      </header>
+      <div id="page_container">
 
-      <main id="content">
-        {products.map((prod,key) => (
-          <Product key={key} prod={prod} />
-        ))}
-      </main>
+        <header className="App-header">
+          <img src="https://fadeskincare.co/images/fade_logo_web.svg" className="App-logo" alt="logo" />
+        </header>
+
+        <main id="content">
+          {products.map((prod,key) => (
+            <Product key={key} prod={prod} />
+          ))}
+        </main>
+
+      </div>
     </div>
   );
 }

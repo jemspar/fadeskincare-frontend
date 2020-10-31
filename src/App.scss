@@ -1,3 +1,9 @@
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
 .App {
   text-align: center;
   position: relative;
@@ -7,39 +13,23 @@
   flex-direction: column;
   align-items: center;
 
-  &::before {
-    content: "";
+  #background {
+    position: fixed;
+    top:0; left:0;
     background: url("./images/amp_background.png");
     background-attachment: fixed;
     background-size: cover;
     min-height: 100vh;
-    filter:blur(5px);
-    top: 0; left: 0;
+    filter: blur(5px);
     width: 100%; height: 100%;
     z-index: 1;
     position: absolute;
   }
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  position: relative;
-  z-index: 2;
-  padding-top: 5rem;
-}
-
-.App-link {
-  color: #61dafb;
+  #page_container {
+    z-index: 2;
+    padding-top: 50px;
+  }
 }
 
 @keyframes App-logo-spin {
@@ -57,25 +47,25 @@ body {
 
 // content
 
+
 main#content {
-  position: relative;
-  z-index: 2;
-  width: 95%;
-  max-width: 500px;
+
 
   .product {
     background-color: #000033;
     background-image: var(--background-src);
     background-size: cover;
     margin: 50px;
-    width: 95%;
-    max-width: 721px;
-    // padding: 25px;
+
+    width: 96vw;
+    max-width: 400px;
+    height: 144vw;
+    max-height: 600px;
+
     color:#bbddff;
     padding: 10px 10px 10px 10px;
     background-size: cover;
-    height: 75vh;
-    max-height: 1081px;
+
 
     p {
       font-family: 'Consolas', monospace;

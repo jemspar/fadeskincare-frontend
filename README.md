@@ -1,3 +1,13 @@
+# To do
+
+2. fix aspect ratio of products
+3. when *backdrop-filter* has wide support, redo background
+
+# done
+
+1. fix background fixed positioning jank
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
