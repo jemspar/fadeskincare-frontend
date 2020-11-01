@@ -1,7 +1,22 @@
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;1,400&display=swap');
+
+header {
+  color: #eef;
+  font-family: 'Archivo', 'Futura', 'Calibri', sans-serif;
+
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+
+  #title {
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 }
+
+
 
 
 .App {
@@ -49,29 +64,68 @@ body {
 
 
 main#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
 
 
   .product {
     background-color: #000033;
-    background-image: var(--background-src);
+    background-image: var(--background-src-1);
     background-size: cover;
+    background-position: center;
     margin: 50px;
 
-    width: 96vw;
+    width: calc(100vw - 100px);
     max-width: 400px;
-    height: 144vw;
+    height: calc(144vw - 150px);
     max-height: 600px;
 
     color:#bbddff;
     padding: 10px 10px 10px 10px;
-    background-size: cover;
 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+
+    &:hover {
+      background-image: var(--background-src-2);
+
+      p.ingredients {
+        display: flex;
+      }
+    }
 
     p {
       font-family: 'Consolas', monospace;
       font-size: 1rem;
       color:white;
       text-align: left;
+      margin: 5px 0 5px 0;
+
+      &.ingredients {
+        font-style: italic;
+        color: #ddf;
+        align-self: flex-end;
+        display: none;
+
+      }
     }
+  }
+}
+
+footer {
+  margin: auto;
+  margin-bottom: 50px;
+  width: 95vw;
+  max-width: 500px;
+  color: #ccccff;
+  font-size: 1rem;
+  text-shadow: 1px 2px 2px black;
+
+  a {
+    color: white;
   }
 }

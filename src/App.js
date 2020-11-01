@@ -10,6 +10,7 @@ function App() {
       <div id="page_container">
 
         <header className="App-header">
+          <div id="title">Fade</div>
           <img src="https://fadeskincare.co/images/fade_logo_web.svg" className="App-logo" alt="logo" />
         </header>
 
@@ -18,6 +19,11 @@ function App() {
             <Product key={key} prod={prod} />
           ))}
         </main>
+
+        <footer>
+          <p>Our ordering system is currently being upgraded. Please email <a href="mailto:jeremy@fadeskincare.co">jeremy@fadeskincare.co</a> to place an order.
+           </p>
+         </footer>
 
       </div>
     </div>
