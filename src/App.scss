@@ -6,6 +6,10 @@ header {
   color: #eef;
   font-family: 'Archivo', 'Futura', 'Calibri', sans-serif;
 
+  margin-bottom: 50px;
+
+      text-shadow: 1px 2px 2px black;
+
   #title {
     font-size: 5rem;
     font-weight: 700;
@@ -23,12 +27,36 @@ header {
     color: $light-blue;
     font-size: 1.25rem;
     font-weight: 500;
-    text-shadow: 1px 2px 2px black;
+
     width: 99%;
     max-width: 300px;
     margin: auto;
 
   }
+
+  ul.navlinks {
+    list-style-type: none;
+    margin: .5rem 0 0 0;
+    padding: 0;
+    font-size: 1rem;
+
+    li {
+      display: inline;
+      margin: 5px;
+      text-transform: uppercase;
+      letter-spacing: 150%;
+
+      a {
+        text-decoration: none;
+        color: white;
+
+        &.active {
+          color: #bbbbff;
+        }
+      }
+    }
+  }
+
 
 
 }
@@ -93,6 +121,7 @@ main#content {
     background-size: cover;
     background-position: center;
     margin: 50px;
+    margin-block-start: 0;
 
     width: calc(100vw - 100px);
     max-width: 400px;
@@ -144,6 +173,20 @@ main#content {
       &.description {
         color: white;
       }
+    }
+  }
+
+
+  .about {
+    width: 95%;
+    max-width: 500px;
+    padding: 25px;
+    background-color: rgba(0,25,50,.8);
+    text-align: left;
+    font-size: 1rem;
+
+    a {
+      color: $light-blue;
     }
   }
 }

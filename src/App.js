@@ -1,7 +1,15 @@
 import './App.scss';
 import Product from './Product'
+import About from './About'
 import {products} from './data/products.js'
 import logo from './images/fade_logo_web.svg'
+
+import {
+  NavLink,
+  Switch,
+  Route
+} from 'react-router-dom'
+
 
 function App() {
 
@@ -19,12 +27,28 @@ function App() {
           </div>
           <img src={logo} className="App-logo" alt="logo" />
 
+          <nav>
+            <ul className="navlinks">
+              <li><NavLink to="/">Home</NavLink></li>
+              <li><NavLink to="/about">About</NavLink></li>
+            </ul>
+          </nav>
+
         </header>
 
         <main id="content">
-          {products.map((prod,key) => (
-            <Product key={key} prod={prod} />
-          ))}
+
+        <Switch>
+          //ABOUT PAGE
+          <Route path="/about"><About /></Route>
+          // HOME PAGE
+          <Route path="/">
+            {products.map((prod,key) => (
+              <Product key={key} prod={prod} />
+            ))}
+          </Route>
+        </Switch>
+
         </main>
 
         <footer>
