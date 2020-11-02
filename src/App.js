@@ -39,9 +39,13 @@ function App() {
         <main id="content">
 
         <Switch>
-          //ABOUT PAGE
+          {
+            //ABOUT PAGE
+          }
           <Route path="/about"><About /></Route>
-          // HOME PAGE
+          {
+            // HOME PAGE
+          }
           <Route path="/">
             {products.map((prod,key) => (
               <Product key={key} prod={prod} />
