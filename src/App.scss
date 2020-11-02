@@ -1,19 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,700;1,500&display=swap');
 
+$light-blue: #ccccff;
+
 header {
   color: #eef;
   font-family: 'Archivo', 'Futura', 'Calibri', sans-serif;
-
-  .App-logo {
-    height: 40vmin;
-    pointer-events: none;
-  }
 
   #title {
     font-size: 5rem;
     font-weight: 700;
     text-transform: uppercase;
+    margin-bottom: 1rem;
   }
+
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+
+  }
+
+  #site_info {
+    color: $light-blue;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-shadow: 1px 2px 2px black;
+    width: 99%;
+    max-width: 300px;
+    margin: auto;
+
+  }
+
+
 }
 
 
@@ -87,17 +104,27 @@ main#content {
 
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: space-between;
 
     cursor:pointer;
 
 
     &.showBG2 {
-      background-image: var(--background-src-2);
+      background: var(--background-src-2), var(--background-src-1);
+      background-size: cover;
+      background-position: center;
 
-      p.ingredients {
+      p.ingredients, p.description {
         display: flex;
       }
+    }
+
+    // .prod_top {
+    //
+    // }
+
+    .prod_bottom {
+      width: 60%;
     }
 
     p {
@@ -107,12 +134,15 @@ main#content {
       text-align: left;
       margin: 5px 0 5px 0;
 
-      &.ingredients {
+      &.ingredients, &.description {
         font-style: italic;
         color: #ddf;
         align-self: flex-end;
         display: none;
+      }
 
+      &.description {
+        color: white;
       }
     }
   }
@@ -123,7 +153,7 @@ footer {
   margin-bottom: 50px;
   width: 95vw;
   max-width: 500px;
-  color: #ccccff;
+  color: $light-blue;
   font-size: 1rem;
   text-shadow: 1px 2px 2px black;
 

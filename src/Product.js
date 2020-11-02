@@ -35,11 +35,18 @@ render() {
       style={
         bgVar
       }
-      onClick={this.toggleBG}
+      onMouseEnter={this.toggleBG}
+      onMouseLeave={this.toggleBG}
       >
-        <p>{this.props.prod.name}</p>
-        <p className="price">${this.props.prod.price}</p>
-        <p className="ingredients">{'ingredients: '+this.props.prod.ingredients}</p>
+
+        <div className="prod_top">
+          <p>{this.props.prod.name}</p>
+          <p className="price">${this.props.prod.price}</p>
+          <p className="ingredients">{'ingredients: '+this.props.prod.ingredients}</p>
+        </div>
+        <div className="prod_bottom">
+          <p className="description">{this.props.prod.description}</p>
+        </div>
       </div>
     )
   }
