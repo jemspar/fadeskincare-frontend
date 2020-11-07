@@ -1,6 +1,7 @@
 import './App.scss';
 import Product from './Product'
 import About from './About'
+import Terms from './Terms'
 import {products} from './data/products.js'
 import logo from './images/fade_logo_web.svg'
 
