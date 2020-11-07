@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 
 class About extends React.Component {
 
@@ -16,6 +17,9 @@ class About extends React.Component {
         <li>We heavily research each potential ingredient, with particular focus to medical/dermatological journals. We link to many of these journal articles so you can read them for yourself.</li>
         <li>We also ensure each and every ingredient is considered safe (both for you and the environment) by the <a href="https://ewg.org/skindeep">Environmental Working Group</a>. Stay tuned for our products to become EWG Verified! :)</li>
       </ol>
+      <br />
+      <p>
+        <NavLink to="/terms">return policy &amp; terms</NavLink>
       </div>
     )
   }

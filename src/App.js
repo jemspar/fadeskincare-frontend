@@ -40,6 +40,10 @@ function App() {
 
         <Switch>
           {
+            // TERMS & RETURNS
+          }
+          <Route path="/terms"><Terms /></Route>
+          {
             //ABOUT PAGE
           }
           <Route path="/about"><About /></Route>
