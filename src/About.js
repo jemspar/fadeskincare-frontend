@@ -20,6 +20,7 @@ class About extends React.Component {
       <br />
       <p>
         <NavLink to="/terms">return policy &amp; terms</NavLink>
+      </p>
       </div>
     )
   }
