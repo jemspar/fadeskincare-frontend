@@ -4,6 +4,8 @@ import About from './About'
 import Terms from './Terms'
 import logo from './images/fade_logo_web.svg'
 
+import yamlProducts from './data/products.yaml'
+
 import {
   NavLink,
   Switch,
@@ -11,15 +13,12 @@ import {
 } from 'react-router-dom'
 
 
-import fs from 'fs';
-import YAML from 'yaml';
+import YAML from 'js-yaml';
+
 
 
 function App() {
 
-  const products = fs.readFile('./data/products.yaml')
-  .then( (data) => YAML.safeLoad(data) )
-  .then( (prods) => console.log(prods) );
 
   return (
     <div className="App">
@@ -59,9 +58,12 @@ function App() {
             // HOME PAGE
           }
           <Route path="/">
-            {products.map((prod,key) => (
-              <Product key={key} prod={prod} />
-            ))}
+            { // yamlProducts.map((prod,key) => (
+              // <Product key={key} prod={prod} />
+            // ))
+          }
+            <div>this is the home page...</div>
+
           </Route>
         </Switch>
 
