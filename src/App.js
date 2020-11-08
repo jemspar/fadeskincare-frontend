@@ -1,7 +1,6 @@
 import './App.scss';
 import Product from './Product'
 import About from './About'
-import {products} from './data/products.js'
 import logo from './images/fade_logo_web.svg'
 
 import {
@@ -11,7 +10,15 @@ import {
 } from 'react-router-dom'
 
 
+import fs from 'fs';
+import YAML from 'yaml';
+
+
 function App() {
+
+  const products = fs.readFile('./data/products.yaml')
+  .then( (data) => YAML.safeLoad(data) )
+  .then( (prods) => console.log(prods) );
 
   return (
     <div className="App">
