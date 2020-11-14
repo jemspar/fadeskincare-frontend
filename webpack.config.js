@@ -1,4 +1,6 @@
 const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -9,7 +11,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'build'),
     filename: 'bundle.js',
-    publicPath: '/public'
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -30,7 +32,8 @@ module.exports = {
         }
       },
       {
-        test: [/\.png$/, /\.jpg$/, /\.jpe?g$/],
+        test: [/\.png$/, /\.jpg$/, /\.jpe?g$/, /\.svg$/],
+        exclude: /node_modules/,
         use: {
             loader: 'url-loader',
             options: {
@@ -39,13 +42,34 @@ module.exports = {
           }
       },
       {
-        test: /\.yaml$/,
+        test: /\.ya?ml$/,
+        exclude: /node_modules/,
         use: {
-          loader: 'yaml-loader'
+          loader: 'js-yaml-loader'
+        }
+      },
+      {
+        test: /\.s?css$/,
+        exclude: /node_modules/,
+        use: ['style-loader','css-loader','sass-loader']
+      },
+      {
+        test: /\.html$/i,
+        exclude: /node_modules/,
+        use: {
+          loader: 'html-loader',
+          options: {minimize: true}
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'index.html',
+      filename: './index.html'
+    })
+  ],
 };
 
 // prev use:

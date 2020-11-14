@@ -1,4 +1,6 @@
-import './App.scss';
+import './App.scss'
+
+import React from 'react'
 import Product from './Product'
 import About from './About'
 import Terms from './Terms'
@@ -11,10 +13,6 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
-
-
-import YAML from 'js-yaml';
-
 
 
 function App() {
@@ -58,10 +56,11 @@ function App() {
             // HOME PAGE
           }
           <Route path="/">
-            { // yamlProducts.map((prod,key) => (
-              // <Product key={key} prod={prod} />
-            // ))
-          }
+            { yamlProducts.products.map((prod,key) => (
+                <Product key={key} prod={prod} />
+              ))
+
+            }
             <div>this is the home page...</div>
 
           </Route>

@@ -2,6 +2,12 @@
 
 $light-blue: #ccccff;
 
+body {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+
 header {
   color: #eef;
   font-family: 'Archivo', 'Futura', 'Calibri', sans-serif;
@@ -101,9 +107,7 @@ header {
   }
 }
 
-body {
-  font-size: 24px;
-}
+
 
 // content
 

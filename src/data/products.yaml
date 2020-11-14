@@ -3,7 +3,7 @@ products:
     name: WAKEUP Oil
     price: 15
     description: an oil moisturizer designed to wake up your skin.
-    primaryImage: wakeup_oil_product.png"
+    primaryImage: wakeup_oil_product.png
     secondaryImage: wakeup_oil_bg.png
     ingredients: jojoba oil, castor oil, frankincense oil, eucalyptus oil, oregano oil
     slug: wakeup-oil
