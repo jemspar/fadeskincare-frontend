@@ -8,6 +8,10 @@ module.exports = {
   entry: [
     './index.js',
   ],
+  devServer: {
+    contentBase: path.join(__dirname,'build'),
+    open: true,
+  },
   output: {
     path: path.join(__dirname, 'build'),
     filename: 'bundle.js',
@@ -67,7 +71,8 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: 'index.html',
-      filename: './index.html'
+      filename: './index.html',
+      title: 'FADE skincare (development)'
     })
   ],
 };

@@ -25,7 +25,9 @@ function App() {
       <div id="page_container">
 
         <header className="App-header">
-          <div id="title">Fade</div>
+          <div id="title">
+            <NavLink to="/">Fade</NavLink>
+          </div>
           <div id="site_info">
             <p>° fade up °<br />° for all °</p>
             <p>simple, clean products formulated for acne-prone skin.</p>
