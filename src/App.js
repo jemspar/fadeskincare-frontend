@@ -26,7 +26,7 @@ function App() {
 
         <header className="App-header">
           <div id="title">
-            <NavLink to="/">Fade</NavLink>
+            <NavLink exact to="/">Fade</NavLink>
           </div>
           <div id="site_info">
             <p>° fade up °<br />° for all °</p>
