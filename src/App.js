@@ -37,7 +37,7 @@ function App() {
           <nav>
             <ul className="navlinks">
               <li><NavLink to="/">Home</NavLink></li>
-              <li><NavLink to="/about">About</NavLink></li>
+              <li><NavLink exact to="/about">About</NavLink></li>
             </ul>
           </nav>
 
